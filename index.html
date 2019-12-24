@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New content Button</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="demo" class="hide-menu">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td><i class="fa fa-life-ring icon" aria-hidden="true"></i>Add Link</td>
+                </tr>
+                <tr>
+                    <td> <i class="fa fa-upload icon" aria-hidden="true"></i>Upload File</td>
+                </tr>
+                <tr>
+                    <td> <i class="fa fa-pencil icon" aria-hidden="true"></i> Write Chapter</td>
+                </tr>
+                <tr>
+                    <td> <i class="fa fa-file icon" aria-hidden="true"></i>New Playlist</td>
+                </tr>
+                </td>
+            </tbody>
+        </table>
+    </div>
+    <div id="container">
+    <button  onclick="myFunction()"  data-toggle="tooltip" class="button button5"><i id="icon"class="fa fa-plus add" aria-hidden="true"></i></button>
+</div>
+
+
+    <script>
+
+ 
+//    function myFunction() {
+//  var x = document.getElementById("demo");
+//  if (x.style.display ==="none") {
+//    x.style.display = "block";
+//  } else {
+//    x.style.display = "none";
+//  }
+//   }
+
+
+function myFunction(){
+    
+    var demo=document.getElementById("demo");
+        if(demo.classList.contains('show-menu'))
+        	{
+                demo.classList.remove('show-menu')
+                demo.classList.add('hide-menu');
+        	}
+    	else{
+            demo.classList.add('show-menu')
+            demo.classList.remove('hide-menu')
+        	}    			
+    };
+
+    (function(document){
+  var div = document.getElementById('container');
+  var icon = document.getElementById('icon');
+  var open = false;
+
+  div.addEventListener('click', function(){
+    if(open){
+      icon.className = 'fa fa-plus';  
+    } else{
+      icon.className = 'fa fa-plus open';
+    }
+
+    open = !open;
+  });
+})(document);
+   
+
+
+   
+   </script>
+</body>
+
+</html>
